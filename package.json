@@ -1,14 +1,18 @@
 {
   "name": "grc-engineering-plugin",
   "version": "0.1.0",
-  "description": "Claude Code plugin for GRC Engineering - bridging infrastructure code and compliance requirements",
+  "description": "GRC engineering toolkit for Claude Code: connector findings to SCF crosswalk to multi-framework gap reports, policy-as-code, OSCAL workflows.",
   "type": "module",
   "scripts": {
-    "map-control": "node scripts/map-control.js",
-    "generate-policy": "node scripts/generate-policy.js",
-    "review-pr": "node scripts/review-pr.js",
-    "collect-evidence": "node scripts/collect-evidence.js",
-    "transform-risk": "node scripts/transform-risk.js"
+    "gap-assessment": "node plugins/grc-engineer/scripts/gap-assessment.js",
+    "pipeline-status": "bash plugins/grc-engineer/scripts/pipeline-status.sh",
+    "scan-iac": "node plugins/grc-engineer/scripts/scan-iac.js",
+    "test-control": "node plugins/grc-engineer/scripts/test-control.js",
+    "map-control": "node plugins/grc-engineer/scripts/map-control.js",
+    "generate-policy": "node plugins/grc-engineer/scripts/generate-policy.js",
+    "review-pr": "node plugins/grc-engineer/scripts/review-pr.js",
+    "collect-evidence": "node plugins/grc-engineer/scripts/collect-evidence.js",
+    "transform-risk": "node plugins/grc-engineer/scripts/transform-risk.js"
   },
   "keywords": [
     "grc",
@@ -16,13 +20,29 @@
     "security",
     "audit",
     "policy-as-code",
+    "oscal",
+    "fedramp",
+    "soc2",
+    "scf",
     "claude-code-plugin"
   ],
-  "license": "MIT",
+  "license": "(MIT AND CC-BY-SA-4.0)",
+  "licenses": [
+    { "type": "MIT", "url": "https://github.com/ethanolivertroy/claude-grc-engineering/blob/main/LICENSE" },
+    { "type": "CC-BY-SA-4.0", "url": "https://github.com/ethanolivertroy/claude-grc-engineering/blob/main/plugins/frameworks/cis-controls/LICENSE-CIS.md" }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanolivertroy/claude-grc-engineering.git"
+  },
+  "homepage": "https://github.com/ethanolivertroy/claude-grc-engineering",
+  "bugs": {
+    "url": "https://github.com/ethanolivertroy/claude-grc-engineering/issues"
+  },
+  "author": "Ethan Troy",
   "dependencies": {
     "dotenv": "^16.4.5",
     "js-yaml": "^4.1.1",
     "@octokit/rest": "^20.0.2"
   }
 }
-
