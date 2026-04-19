@@ -8,6 +8,10 @@ allowed-tools: Read, Write, Glob
 
 Maintains and analyzes organizational risk registers.
 
+The register is user-owned state. Write one file per risk under
+`./grc-data/risks/`, keep it reviewable in Git, and use
+`schemas/risk.schema.json` as the contract for JSON or JSON-equivalent YAML.
+
 ## Capabilities
 
 - **Risk Identification**: Identify and categorize risks

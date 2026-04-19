@@ -35,3 +35,4 @@ Monitors and reports on organizational compliance posture.
 - Reads from compliance documentation repositories
 - Analyzes evidence folders for completeness
 - Parses audit reports for findings status
+- Uses `./grc-data/metrics/` for KPI/KRI trend lines when those records exist

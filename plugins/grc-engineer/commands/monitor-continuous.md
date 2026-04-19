@@ -244,6 +244,21 @@ dashboard:
 retention_days: 90
 EOF
 
+# Create automation metric snapshot config
+cat > automation-metrics.yaml <<EOF
+defaults:
+  window_label: current-week
+  out_dir: ./grc-data/metrics
+  dimensions:
+    audience: ciso-weekly
+entries:
+  - framework: fedramp-moderate
+    provider: aws
+  - framework: soc2
+    controls_total: 64
+    controls_automated: 22
+EOF
+
 # Deploy monitoring
 /grc-engineer:monitor-continuous SOC2,PCI-DSS,NIST --config=compliance-monitor.yaml
 ```
@@ -337,6 +352,12 @@ jobs:
             exit 1
           fi
 
+      - name: Record automation snapshots
+        run: |
+          node plugins/grc-engineer/scripts/record-automation-metrics.js \
+            --config=automation-metrics.yaml \
+            --window-label=current-week
+
       - name: Send to Slack
         if: failure()
         uses: slackapi/slack-github-action@v1
@@ -365,4 +386,5 @@ jobs:
 - `/grc-engineer:test-control` - Test individual controls
 - `/grc-engineer:scan-iac` - Scan infrastructure for violations
 - `/grc-engineer:collect-evidence` - Collect compliance evidence
+- `/grc-engineer:record-automation-metrics` - Persist weekly automation coverage history
 - `/grc-engineer:generate-implementation` - Implement controls

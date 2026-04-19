@@ -6,6 +6,13 @@ description: Track compliance status across frameworks and controls
 
 Monitors and reports on compliance status across multiple frameworks.
 
+Trend data belongs in `./grc-data/metrics/` and should follow
+[`docs/GRC-DATA.md`](../../../docs/GRC-DATA.md) plus
+`schemas/metric.schema.json`.
+
+Use `/grc-engineer:record-automation-metrics` when you want to seed automation
+trend lines instead of hand-authoring JSON rows.
+
 ## Arguments
 
 - `$1` - Framework or control set (optional, defaults to all)

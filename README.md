@@ -54,6 +54,7 @@ Full walkthrough: [`docs/QUICKSTART.md`](docs/QUICKSTART.md).
 | Find conflicting requirements across frameworks, with "most-restrictive wins" resolution | `/grc-engineer:find-conflicts` |
 | Optimize multi-framework implementation (satisfy many with one) | `/grc-engineer:optimize-multi-framework` |
 | Continuous monitoring with Slack, PagerDuty, or email alerts | `/grc-engineer:monitor-continuous` |
+| Write automation coverage snapshots into `grc-data/metrics/` | `/grc-engineer:record-automation-metrics` |
 | Check pipeline health: which connectors are configured, last-run, cache freshness | `/grc-engineer:pipeline-status` |
 | Review a PR for compliance regressions before merge | `/grc-engineer:review-pr` |
 | Build audit workpapers and evidence packages | `/grc-auditor:generate-workpaper`, `/grc-engineer:collect-evidence` |
@@ -70,7 +71,7 @@ Every command's reference page lives in its plugin's `commands/` directory with 
 
 | Plugin | Purpose |
 |---|---|
-| **grc-engineer** | Where the pipeline lives: `/gap-assessment`, `scan-iac`, `test-control`, `generate-implementation`, `generate-policy`, `map-controls-unified`, `find-conflicts`, `optimize-multi-framework`, `monitor-continuous`, `collect-evidence`, `review-pr`, `pipeline-status`. |
+| **grc-engineer** | Where the pipeline lives: `/gap-assessment`, `scan-iac`, `test-control`, `generate-implementation`, `generate-policy`, `map-controls-unified`, `find-conflicts`, `optimize-multi-framework`, `monitor-continuous`, `collect-evidence`, `record-automation-metrics`, `review-pr`, `pipeline-status`. |
 
 ### Persona plugins
 

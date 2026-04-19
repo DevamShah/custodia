@@ -1,0 +1,19 @@
+defaults:
+  window_label: current-week
+  out_dir: ./grc-data/metrics
+  dimensions:
+    audience: ciso-weekly
+
+entries:
+  - framework: fedramp-moderate
+    provider: aws
+
+  - framework: soc2
+    controls_total: 64
+    controls_automated: 22
+    dimensions:
+      business_unit: platform
+
+  - framework: iso27001
+    controls_total: 93
+    controls_automated: 40

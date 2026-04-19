@@ -6,6 +6,10 @@ description: Manage the risk register and risk assessments
 
 Maintains the organizational risk register and performs risk assessments.
 
+Risk register entries belong in `./grc-data/risks/` and should follow
+[`docs/GRC-DATA.md`](../../../docs/GRC-DATA.md) plus
+`schemas/risk.schema.json`.
+
 ## Arguments
 
 - `$1` - Action (required: add, update, assess, report)
@@ -26,6 +30,7 @@ Maintains the organizational risk register and performs risk assessments.
 - Inherent vs residual risk scores
 - Mitigation status and owner
 - Target resolution date
+- Linked findings or controls when the risk is backed by current evidence
 
 ## Example
 
