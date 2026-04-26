@@ -12,6 +12,7 @@ ajy0127
 anandsundar
 -github:carycooper777 spam
 devamshah
+dexcopeland
 ethanolivertroy
 funkeomolere trusted contributor
 jeftekhari
