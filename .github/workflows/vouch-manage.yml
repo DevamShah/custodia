@@ -15,6 +15,9 @@ permissions:
 
 jobs:
   manage:
+    # Vouch needs the VOUCH_APP_ID / VOUCH_APP_PRIVATE_KEY secrets, which only
+    # exist upstream. Skip in forks so they no-op instead of failing every run.
+    if: github.repository == 'GRCEngClub/claude-grc-engineering'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/create-github-app-token@v1
