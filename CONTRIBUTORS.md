@@ -15,7 +15,7 @@ After a contribution lands, a maintainer can recognize it with:
 ```
 
 Thanks goes to these wonderful people
-([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+([emoji key](https://allcontributors.org/docs/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <table>
